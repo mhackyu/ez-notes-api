@@ -32,6 +32,6 @@ app.get('/', (req, res) => {
 require('./src/routes/note.routes')(app);
 
 // listen for requests
-app.listen(4000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log('Server is listening on port 4000');
 });
