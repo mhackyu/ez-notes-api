@@ -18,9 +18,9 @@ mongoose.connect(dbConfig.url)
   .then(() => {
     console.log('Connected to database');
   }).catch((err) => {
-    // console.log(err.stack);
+    console.log(err.stack);
     console.log('Could not connect to the database. Exiting now..');
-    // process.exit();
+    process.exit();
   });
 
 // home route
@@ -32,6 +32,6 @@ app.get('/', (req, res) => {
 require('./src/routes/note.routes')(app);
 
 // listen for requests
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log('Server is listening on port 4000');
 });
