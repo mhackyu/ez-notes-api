@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // Create express app
 const app = express();
@@ -14,7 +15,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(dbConfig.url)
+mongoose.connect(process.env.DB_URL)
   .then(() => {
     console.log('Connected to database');
   }).catch((err) => {
@@ -34,4 +35,5 @@ require('./src/routes/note.routes')(app);
 // listen for requests
 app.listen(process.env.PORT || 4000, () => {
   console.log('Server is listening on port 4000');
+  // console.log(process.env.DB_URL);
 });
