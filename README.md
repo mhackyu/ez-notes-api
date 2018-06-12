@@ -20,7 +20,7 @@ Step 2: Run
 $ npm install
 ```
 Step 3: To configure mongodb, create .*env* file in root directory 
-**Example**
+**Example below**
 ```
 ezNotes
  |-src
