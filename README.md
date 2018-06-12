@@ -1,3 +1,4 @@
+
 # ezNotes
 
 Simple API CRUD operation using express and mongodb. 
@@ -42,6 +43,15 @@ $ npm start
 Step 5: Browse http://localhost:4000
 
 And you're done!
+
+## Examples
+```
+GET     /notes       - get all notes.
+GET     /notes/:id   - get note by id.
+POST    /notes       - create a new note.
+PUT     /notes/:id   - update note by id.
+DELETE  /notes/:id   - delete note by id.
+```
 
 ## Author
 * Mark Christian Paderes [@mhackyu](https://github.com/mhackyu)
